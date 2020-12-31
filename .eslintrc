@@ -1,0 +1,38 @@
+{
+    "extends": [
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended"
+    ],
+
+    "ignorePatterns": [
+        "node_modules/",
+        "lib"
+    ],
+
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["import", "@typescript-eslint"],
+
+    "rules": {
+        "no-async-promise-executor": "error",
+        "no-return-await": "error",
+        "require-await": "error",
+        "max-len": "off",
+        "no-restricted-syntax": "off",
+        "import/no-unresolved": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            { "devDependencies": true }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["packages"],
+                "extensions": [".js", ".json", ".ts"]
+            }
+        }
+    },
+    "env": {
+        "jest": true
+    }
+}
