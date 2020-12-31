@@ -1,9 +1,3 @@
-type Result<R> = [Error | null, R?];
-
-interface Callback {
-  <Arg, R>(...a: Array<Arg>): R
-}
-
 export default function doublet<Arg, R>(cb: Callback, ...args: Array<Arg>): Result<R> | Promise<Result<R>> {
   try {
     const result: R = cb(...args);
