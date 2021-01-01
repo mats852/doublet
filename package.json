@@ -4,7 +4,10 @@
   "description": "Handle any Javascript function as an error and response tuple.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest tests/* --forceExit --maxWorkers=4"
+    "test": "jest tests/* --forceExit --maxWorkers=4",
+    "build": "tsc",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --ext .ts . --fix"
   },
   "files": [
     "lib/**/*"
