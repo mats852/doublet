@@ -5,11 +5,11 @@ export default function doublet<Arg, R>(cb: Callback, ...args: Array<Arg>): Resu
     if (result instanceof Promise) {
       return result
         .then((rx) => [null, rx])
-        .catch((error) => [error]) as Promise<Result<R>>;
+        .catch((error) => [error, null]) as Promise<Result<R>>;
     }
 
     return [null, result];
   } catch (error) {
-    return [error];
+    return [error, null];
   }
 }
