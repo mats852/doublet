@@ -1,5 +1,6 @@
-type Result<R> = [Error | null, R?];
+type Result<R> = [Error, null] | [null, R];
 
-interface Callback {
-  <Arg, R>(...a: Array<Arg>): R
-}
+type Callback<Arg, R> = (...args: Array<Arg>) => R;
+
+type MaybeAsyncResult<R> = R extends Promise<infer U> ? Promise<Result<U>> : Result<R>
+

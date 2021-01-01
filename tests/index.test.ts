@@ -23,7 +23,7 @@ describe('given a synchronous function', () => {
       const [error, result] = doublet(thatFails);
 
       expect(error).toEqual(Error('failed'));
-      expect(result).toBeUndefined();
+      expect(result).toBeNull();
     });
   });
 });
@@ -49,9 +49,9 @@ describe('given an asynchronous function', () => {
         throw new Error(result);
       }
 
-      expect(doublet(thatFails, 'abc', 'def', 'ghi')).resolves.toStrictEqual([
-        Error('failed'),
-      ]);
+      expect(doublet(thatFails, 'abc', 'def', 'ghi')).resolves.toStrictEqual(
+        [Error('failed'), null],
+      );
     });
   });
 });
@@ -76,7 +76,7 @@ describe('given an function that returns a promise', () => {
       }
 
       expect(doublet(thatFails, 'abc', 'def', 'ghi')).resolves.toStrictEqual(
-        [Error('failed')],
+        [Error('failed'), null],
       );
     });
   });
