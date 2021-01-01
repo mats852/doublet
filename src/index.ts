@@ -1,4 +1,4 @@
-export default function doublet<Arg, R>(cb: Callback, ...args: Array<Arg>): Result<R> | Promise<Result<R>> {
+export default function doublet<Arg, R>(cb: Callback<Arg, R>, ...args: Array<Arg>): Result<R> | Promise<Result<R>> {
   try {
     const result: R = cb(...args);
 

@@ -1,5 +1,3 @@
 type Result<R> = [Error, null] | [null, R];
 
-interface Callback {
-  <Arg, R>(...a: Array<Arg>): R
-}
+type Callback<Arg, R> = (...args: Array<Arg>) => R;
