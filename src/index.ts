@@ -1,6 +1,6 @@
 export default function doublet<Arg, R>(cb: Callback<Arg, R>, ...args: Array<Arg>): Result<R> | Promise<Result<R>> {
   try {
-    const result: R = cb(...args);
+    const result = cb(...args);
 
     if (result instanceof Promise) {
       return result
