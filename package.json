@@ -8,7 +8,7 @@
     "build": "tsc",
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --ext .ts . --fix",
-    "prepublishOnly": "npm run test && npm run build"
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "files": [
     "lib/**/*"
