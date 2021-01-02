@@ -1,6 +1,6 @@
 {
   "name": "doublet",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Handle any Javascript function as an error and response tuple.",
   "main": "lib/index.js",
   "scripts": {
