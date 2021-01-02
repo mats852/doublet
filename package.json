@@ -7,7 +7,8 @@
     "test": "jest tests/* --forceExit --maxWorkers=4",
     "build": "tsc",
     "lint": "eslint --ext .ts .",
-    "lint:fix": "eslint --ext .ts . --fix"
+    "lint:fix": "eslint --ext .ts . --fix",
+    "prepublishOnly": "npm run test && npm run build"
   },
   "files": [
     "lib/**/*"
