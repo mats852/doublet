@@ -11,8 +11,10 @@
     "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "types.d.ts"
   ],
+  "typings": "./types.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mats852/doublet.git"
