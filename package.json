@@ -23,7 +23,8 @@
     "function",
     "tuple",
     "async",
-    "inline"
+    "inline",
+    "doublet"
   ],
   "author": "Mathieu St-Vincent",
   "license": "Apache-2.0",
