@@ -1,6 +1,6 @@
 {
   "name": "doublet",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Handle any Javascript function as an error and response tuple.",
   "main": "lib/index.js",
   "scripts": {
@@ -11,8 +11,10 @@
     "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "types.d.ts"
   ],
+  "typings": "./types.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mats852/doublet.git"
@@ -21,7 +23,8 @@
     "function",
     "tuple",
     "async",
-    "inline"
+    "inline",
+    "doublet"
   ],
   "author": "Mathieu St-Vincent",
   "license": "Apache-2.0",
