@@ -1,6 +1,9 @@
 # doublet
 Handle any Javascript and Typescript function as an error and response tuple. This prevents declaring variables outside of a try/catch block for a cleaner flow.
 
+[![doublet](https://img.shields.io/npm/v/doublet.svg)](https://www.npmjs.com/package/doublet)
+[![licence](https://img.shields.io/github/license/mats852/doublet)](https://img.shields.io/github/license/mats852/doublet)
+
 ## Installation
 
 ```shell
