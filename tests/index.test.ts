@@ -3,7 +3,7 @@ import doublet from '@/index';
 describe('given a synchronous function', () => {
   describe('when the function succeeds', () => {
     test('then the first index of the tuple is null and the second is the result', () => {
-      function thatWorks(...args) {
+      function thatWorks(...args: string[]) {
         return args;
       }
 
@@ -31,7 +31,7 @@ describe('given a synchronous function', () => {
 describe('given an asynchronous function', () => {
   describe('when the function succeeds', () => {
     test('then the first index of the tuple is null and the second is the result', () => {
-      async function thatWorks(...args) {
+      async function thatWorks(...args: string[]) {
         const result = await Promise.resolve(args);
         return result;
       }
@@ -59,7 +59,7 @@ describe('given an asynchronous function', () => {
 describe('given an function that returns a promise', () => {
   describe('when the function succeeds', () => {
     test('then the first index of the tuple is null and the second is the result', () => {
-      function thatWorks(...args) {
+      function thatWorks(...args: string[]) {
         return Promise.resolve(args);
       }
 
